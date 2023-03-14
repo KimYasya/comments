@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Комментарии</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  
+  <form class="addtask">
+
+    <span>Имя</span>
+    <input class="addtask__title" type="text" name="title" placeholder="Заголовок">
+
+    <span>Комментарий</span>
+    <textarea class="addtask__description" type="text" name="description" placeholder="Описание" value={description}></textarea>
+
+    <span>Дата добавления</span>
+    <input class="addtask__description" type="date" name="description" value={deadline}>
+
+    <div>
+      <button type="submit" class="addtask__btn" onClick={handleClickAdd}>Добавить комментарий</button>
+    </div>
+
+  </form>
+
+<div class="comments">
+  <span class="comments__header">Комментарии</span>
+  <div class="comments__list"></div>
+</div>
+
+</body>
+
+</html>
