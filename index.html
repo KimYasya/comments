@@ -7,33 +7,89 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-  
-  <form class="addtask">
+
+  <div class="comments">
+    <span class="comments__header">Комментарии</span>
+    <div class="comments__list">
+      <div class="coment__block">
+        <div class="comment_item">
+          <div class="comment_info">
+            <svg width="20" height="35" viewBox="0 0 26.020853 20.799076" xmlns="http://www.w3.org/2000/svg"
+              class="svg_like" id="svg_like">
+              <path
+                d="m 1.7952743,1.7234655 c 2.3937,-2.29795401 6.26159,-2.29795401 8.6552797,0 l 2.5598,2.45748 2.5599,-2.45748 
+        c 2.3937,-2.29795401 6.2616,-2.29795401 8.6554,0 2.3936,2.29795 2.3936,6.01111 0,8.3091095 l -11.2153,10.7665 
+        -11.2150797,-10.7665 c -2.39369904,-2.2979995 -2.39369904,-6.0111595 0,-8.3091095 z m 6.88751,1.69705 c -1.41738,
+        -1.36069 -3.70235,-1.36069 -5.11975,0 -1.41738,1.36069 -1.41738,3.55427 0,4.91502 l 9.4473197,9.0694395 9.4475,
+        -9.0694395 c 1.4174,-1.36075 1.4174,-3.55433 0,-4.91502 -1.4174,-1.36069 -3.7024,-1.36069 -5.1197,0 l -4.3278,4.15458 z"
+                fillRule="evenodd" clipRule="evenodd" />
+              <path d="M 7.7304052,12.678189 C 1.900041,7.078087 2.1557048,7.3490596 1.8320586,6.4266572 1.6769744,5.9846617 
+        1.6714622,5.9465614 1.6705366,5.3102305 1.6697134,4.7442198 1.6845808,4.6036397 1.7760799,4.3122514 2.2282189,2.8723671 
+        3.3830955,1.8642309 4.8801033,1.6026298 5.9453098,1.4164857 7.1566675,1.719301 7.9788469,2.3772542 c 0.157776,0.126261 
+        1.3451794,1.2467522 2.6386741,2.4899803 1.293496,1.2432282 2.370279,2.2604148 2.392851,2.2604148 0.02258,0 1.139958,
+        -1.0553778 2.483076,-2.3452838 1.343116,-1.2899061 2.554482,-2.4218587 2.691924,-2.5154505 0.370101,-0.2520211 
+        0.764497,-0.4393935 1.213282,-0.5764152 0.35883,-0.1095565 0.469331,-0.1219155 1.081209,-0.1209282 0.605706,9.774e-4 
+        0.726002,0.014554 1.081211,0.1220279 1.272568,0.3850349 2.219743,1.2740407 2.634096,2.4723261 0.112002,0.3239122 
+        0.141192,0.4931478 0.159222,0.9231827 0.01302,0.3105144 -1.82e-4,0.6544103 -0.03218,0.8381581 -0.106527,0.6117182 
+        -0.434337,1.2863273 -0.851182,1.7516606 -0.27,0.3014081 -10.41456,10.037187 -10.458622,10.037187 -0.02146,0 -2.398353,
+        -2.266167 -5.2819973,-5.035925 z" />
+            </svg>
+
+            <div class="comment_name">Яна</div>
+            <div class="comment_date">15.03.23 15:33</div>
+            <button class="remove-button" id="remove-button">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="svg_trash">
+                <path
+                  d="M23 4.5C23 3.67158 22.3285 3 21.5 3H17.724C17.0921 1.20736 15.4007 0.00609375 13.5 0H10.5C8.59928 0.00609375 6.90789 1.20736 6.27602 3H2.5C1.67158 3 1 3.67158 1 4.5C1 5.32842 1.67158 6 2.5 6H3.00002V18.5C3.00002 21.5376 5.46245 24 8.5 24H15.5C18.5376 24 21 21.5376 21 18.5V6H21.5C22.3285 6 23 5.32842 23 4.5ZM18 18.5C18 19.8807 16.8807 21 15.5 21H8.5C7.1193 21 6.00002 19.8807 6.00002 18.5V6H18V18.5Z" />
+                <path
+                  d="M9.5 18C10.3284 18 11 17.3284 11 16.5V10.5C11 9.67158 10.3284 9 9.5 9C8.67158 9 8 9.67158 8 10.5V16.5C8 17.3284 8.67158 18 9.5 18Z" />
+                <path
+                  d="M14.5 18C15.3284 18 16 17.3284 16 16.5V10.5C16 9.67158 15.3284 9 14.5 9C13.6716 9 13 9.67158 13 10.5V16.5C13 17.3284 13.6716 18 14.5 18Z" />
+              </svg>
+            </button>
+          </div>
+          <div class="comment_text">Стартовый комментарий нельзя удалить.<br>
+            Реализована форма добавления комментария с валидацией полей: имя проверяется на заполнение, текст
+            проверяется на минимальную длину. Каждый комментарий можно лайкнуть
+            и удалить. в форме данные хранятся до тех пор, пока она не будет отправлена.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <form class="add-comment" id="add-comment">
 
     <span>Имя</span>
-    <input class="addtask__title" type="text" name="title" placeholder="Заголовок">
+    <div class="error_block">
+      <input class="add-comment__title" type="text" name="title" placeholder="Имя">
+      <div class="error" id="error_name">Вы не ввели имя!</div>
+    </div>
 
     <span>Комментарий</span>
-    <textarea class="addtask__description" type="text" name="description" placeholder="Описание" value={description}></textarea>
+    <div class="error_block">
+      <textarea class="add__comment" type="text" name="description" placeholder="Введите ваш комментарий"></textarea>
+      <div class="error" id="error_text">Комментарий должен быть не короче 5 символов!</div>
+    </div>
 
     <span>Дата добавления</span>
-    <input class="addtask__description" type="date" name="description" value={deadline}>
+    <div class="error_block">
+      <input class="add-comment__date" type="date" name="description">
+    </div>
 
     <div>
-      <button type="submit" class="addtask__btn" onClick={handleClickAdd}>Добавить комментарий</button>
+      <button type="click" class="add-comment__btn" id="add-comment__btn">Добавить комментарий</button>
     </div>
 
   </form>
 
-<div class="comments">
-  <span class="comments__header">Комментарии</span>
-  <div class="comments__list"></div>
-</div>
 
+  <script src="./script.js"></script>
 </body>
 
 </html>
